@@ -8,6 +8,8 @@ Mobile app to use the Vive Ultimate Trackers without a PC
 
 ## Installation
 
+Download the apk [htctrackerdongle.apk](https://github.com/mgschwan/ViveUltimateTrackerMobile/raw/refs/heads/main/binary/htctrackerdongle.apk)
+
 Install via ADB:
 ```
 adb install htctrackerdongle.apk
