@@ -27,6 +27,9 @@ adb install htctrackerdongle.apk
 8. Wait until it shows as connected
 9. Move your tracker around until it has found it's position, this will be indicated if it shows **Pos+Rot** in the log
 10. Connect the other trackers by going back to 5.
+11. Adjust the toggles in the tracker tab as needed to match the coordinate system with your software.
+  * Flip/Regular will either flip a coordinate axis or leave it unchanged
+  * Inv Rot/No Rot will invert the rotation around an axis or leave it unchanged
 
 ## Usage with Meta Quest standalone
 
