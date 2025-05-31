@@ -15,6 +15,23 @@ Install via ADB:
 adb install htctrackerdongle.apk
 ```
 
+## Usage with phone
+
+1. Connect the USB dongle to your phone
+2. Open the Tracker app
+3. Accept USB permissions
+4. Enter the OSC target host and port and make sure the OSC switch is enabled
+5. Click connect and wait until the status log shows that it's connected
+6. Go to the Tracker tab
+7. Connect your master tracker by holding the connect button on the tracker for a moment
+8. Wait until it shows as connected
+9. Move your tracker around until it has found it's position, this will be indicated if it shows **Pos+Rot** in the log
+10. Connect the other trackers by going back to 5.
+
+## Usage with Meta Quest standalone
+
+The process is the same as with the phone but the OSC target address will be **127.0.0.1** because you will be sending the OSC messages locally 
+
 ## Important Notes & Troubleshooting
 
 *   **Error Recovery:** The current version cannot recover from errors. If something goes wrong, disconnect the dongle, exit the app, reconnect the dongle, and start the app again.
