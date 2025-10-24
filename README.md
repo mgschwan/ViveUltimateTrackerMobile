@@ -21,8 +21,8 @@ adb install htctrackerdongle.apk
 ## Usage with phone
 
 1. Connect the USB dongle to your phone
-2. Open the Tracker app
-3. Accept USB permissions
+2. Click Grant USB Permission
+3. Accept USB connection dialog
 4. Enter the OSC target host and port and make sure the OSC switch is enabled
 5. Click connect and wait until the status log shows that it's connected
 6. Go to the Tracker tab

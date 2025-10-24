@@ -79,7 +79,7 @@ open class UsbHidDevice(appContext: Context, connectionHandler: IUsbConnectionHa
         } else {
             val mPermissionIntent = PendingIntent.getBroadcast(
                 mApplicationContext, 0,
-                Intent(ACTION_USB_PERMISSION), PendingIntent.FLAG_ONE_SHOT
+                Intent(ACTION_USB_PERMISSION), PendingIntent.FLAG_ONE_SHOT or PendingIntent.FLAG_IMMUTABLE
             )
             mUsbManager.requestPermission(device, mPermissionIntent)
         }
@@ -216,7 +216,7 @@ open class UsbHidDevice(appContext: Context, connectionHandler: IUsbConnectionHa
                             } else {
                                 val mPermissionIntent = PendingIntent.getBroadcast(
                                     mApplicationContext, 0,
-                                    Intent(ACTION_USB_PERMISSION), 0)
+                                    Intent(ACTION_USB_PERMISSION), PendingIntent.FLAG_IMMUTABLE)
                                 mUsbManager.requestPermission(device, mPermissionIntent)
                             }
                         }
@@ -238,7 +238,7 @@ open class UsbHidDevice(appContext: Context, connectionHandler: IUsbConnectionHa
         // Initialize broadcast receiver
         mPermissionIntent =  PendingIntent.getBroadcast(mApplicationContext, 0, Intent(
             ACTION_USB_PERMISSION
-        ), 0)
+        ), PendingIntent.FLAG_IMMUTABLE)
         val filter = IntentFilter(ACTION_USB_PERMISSION)
         filter.addAction(UsbManager.ACTION_USB_DEVICE_ATTACHED)
         filter.addAction(UsbManager.ACTION_USB_DEVICE_DETACHED)
