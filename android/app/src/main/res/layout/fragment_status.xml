@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".StatusFragment" >
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center">
+
+            <ToggleButton
+                android:id="@+id/flipXPos"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checked="true"
+                android:text="Flip X"
+                android:textOff="REGULAR X"
+                android:textOn="FLIP X" />
+
+            <ToggleButton
+                android:id="@+id/flipYPos"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="FLIP Y"
+                android:textOff="REGULAR Y"
+                android:textOn="FLIP Y" />
+
+            <ToggleButton
+                android:id="@+id/flipZPos"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="FLIP Z"
+                android:textOff="REGULAR Z"
+                android:textOn="FLIP Z" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center">
+
+            <ToggleButton
+                android:id="@+id/flipXRot"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checked="false"
+                android:text="ROTATE X"
+                android:textOff="NO X ROT"
+                android:textOn="INV X ROT" />
+
+            <ToggleButton
+                android:id="@+id/flipYRot"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="ROTATE Y"
+                android:textOff="NO Y ROT"
+                android:textOn="INV Y ROT" />
+
+            <ToggleButton
+                android:id="@+id/flipZRot"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="ROTATE Z"
+                android:textOff="NO Z ROT"
+                android:textOn="INV Z ROT" />
+        </TableRow>
+    </TableLayout>
+
+    <EditText
+        android:id="@+id/positionData1"
+        style="@style/PositionData"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:gravity="start|top"
+        android:inputType="textMultiLine"
+        android:textSize="20sp" />
+
+    <EditText
+        android:id="@+id/positionData2"
+        style="@style/PositionData"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:gravity="start|top"
+        android:inputType="textMultiLine"
+        android:textSize="20sp" />
+
+    <EditText
+        android:id="@+id/positionData3"
+        style="@style/PositionData"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:gravity="start|top"
+        android:inputType="textMultiLine"
+        android:textSize="20sp" />
+
+    <EditText
+        android:id="@+id/positionData4"
+        style="@style/PositionData"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:gravity="start|top"
+        android:inputType="textMultiLine"
+        android:textSize="20sp" />
+
+    <EditText
+        android:id="@+id/positionData5"
+        style="@style/PositionData"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:gravity="start|top"
+        android:inputType="textMultiLine"
+        android:textSize="20sp" />
+</LinearLayout>

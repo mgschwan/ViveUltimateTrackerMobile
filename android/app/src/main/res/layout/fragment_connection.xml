@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".ConnectionFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <EditText
+            android:id="@+id/poseTargetHost"
+            style="@style/PositionData"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="text"
+            android:text="127.0.0.1"
+            android:textSize="20sp" />
+
+        <EditText
+            android:id="@+id/poseTargetPort"
+            style="@style/PositionData"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:ems="10"
+            android:inputType="text"
+            android:text="9000"
+            android:textSize="20sp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <Switch
+            android:id="@+id/oscSwitch"
+            style="@style/PositionData"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:checked="true"
+            android:text="OSC Protocol enabled"
+            android:textSize="20sp" />
+
+        <ToggleButton
+            android:id="@+id/shouldLogButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="ShouldLog"
+            android:textOff="Logging off"
+            android:textOn="Logging on" />
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/connectButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Connect"
+        android:textSize="20sp" />
+
+    <TextView
+        android:id="@+id/floorOffset"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="0.0"
+        android:textColor="#FFFFFF"
+        android:textSize="20sp" />
+
+    <Button
+        android:id="@+id/calibrateFloor"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="CALIBRATE FLOOR"
+        android:textSize="20sp" />
+
+    <EditText
+        android:id="@+id/statusMessages"
+        style="@style/Widget.AppCompat.AutoCompleteTextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:gravity="start|top"
+        android:inputType="textMultiLine" />
+
+</LinearLayout>

@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".ToolsFragment" >
+
+    <Button
+        android:id="@+id/endMapButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="End Map"
+        android:textSize="20sp" />
+
+    <Button
+        android:id="@+id/resetMapButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Reset Map"
+        android:textSize="20sp" />
+
+    <Button
+        android:id="@+id/turnOffButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Turn off tracker"
+        android:textSize="20sp" />
+
+    <Button
+        android:id="@+id/resetTrackerButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Reset Tracker"
+        android:textSize="20sp" />
+
+    <EditText
+        android:id="@+id/ackText"
+        style="@style/PositionData"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="text"
+        android:text="ACF50"
+        android:textSize="20sp" />
+
+    <Button
+        android:id="@+id/genericAckButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Send generic ack"
+        android:textSize="20sp" />
+</LinearLayout>
