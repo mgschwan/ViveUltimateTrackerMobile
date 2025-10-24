@@ -54,9 +54,32 @@ public class ConnectionFragment extends Fragment {
         port_field.setText( Integer.toString( port_pref ) );
         flooroffset_field.setText( Float.toString( flooroffset_pref ) );
 
+        tmp.findViewById(R.id.connectButton).setEnabled(false);
+
+        ((Button) tmp.findViewById(R.id.grantUsbPermissionButton)).setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                Log.d("BUTTONS", "User tapped the Grant USB Permission Button");
+                if ( DeviceContainer.bridge == null )
+                {
+                    // 0x0bb4 = 2996
+                    // 0x0350 = 848
+                    DeviceContainer.bridge = new HidBridge(context, 848, 2996);
+                }
+
+                if ( DeviceContainer.bridge.OpenDevice() )
+                {
+                    // Disable the grantUsbPermissionButton
+                    v.setEnabled(false);
+                    // Enable the connectButton
+                    tmp.findViewById(R.id.connectButton).setEnabled(true);
+                }
+            }
+        });
+
+
         ((Button) tmp.findViewById(R.id.calibrateFloor)).setOnClickListener( new View.OnClickListener() {
 
-            @Override
+    @Override
             public void onClick(View view) {
 
                 if ( DeviceContainer.deviceOpen ) {
@@ -81,6 +104,10 @@ public class ConnectionFragment extends Fragment {
             public void onClick(View v) {
                 Log.d("BUTTONS", "User tapped the Connect Button");
 
+                if ( DeviceContainer.bridge == null || !DeviceContainer.deviceOpen ) {
+                    Log.d( TAG, "Device not connected" );
+                    return;
+                }
 
                 String address = address_field.getText().toString();
                 String portText = port_field.getText().toString();

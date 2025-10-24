@@ -60,6 +60,13 @@
     </LinearLayout>
 
     <Button
+        android:id="@+id/grantUsbPermissionButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Grant USB Permission"
+        android:textSize="20sp" />
+
+    <Button
         android:id="@+id/connectButton"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

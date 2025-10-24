@@ -668,11 +668,13 @@ public class HidBridge {
             String action = intent.getAction();
             if (ACTION_USB_PERMISSION.equals(action)) {
                 synchronized (this) {
+                    DeviceContainer.deviceOpen = true;
+
                     UsbDevice device = (UsbDevice)intent.getParcelableExtra(UsbManager.EXTRA_DEVICE);
 
                     if (intent.getBooleanExtra(UsbManager.EXTRA_PERMISSION_GRANTED, false)) {
                         if(device != null){
-
+                            Log("permission granted for device " + device);
                             //call method to set up device communication
                         }
                     }

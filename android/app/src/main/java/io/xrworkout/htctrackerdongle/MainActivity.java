@@ -46,11 +46,7 @@ public class MainActivity extends AppCompatActivity {
         viewPagerAdapter = new ViewPagerAdapter(this);
         viewPager.setAdapter( viewPagerAdapter );
 
-        // 0x0bb4 = 2996
-        // 0x0350 = 848
-        DeviceContainer.bridge = new HidBridge(this, 848,2996);
 
-        DeviceContainer.deviceOpen = DeviceContainer.bridge.OpenDevice();
 
         mainTabLayout.addOnTabSelectedListener(new TabLayout.OnTabSelectedListener() {
             @Override
