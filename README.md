@@ -1,4 +1,5 @@
-Update October 24th 2025: Since the app can be installed on the Samsung Galaxy XR without the need for sideloading I will be populating this repository with the source code of the app soon, so that more people can work on it.
+# Update October 24th 2025: 
+Since the app can be installed on the Samsung Galaxy XR without the need for sideloading I will be populating this repository with the source code of the app soon, so that more people can work on it.
 
 # Vive Ultimate Tracker Mobile App
 
